@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+  {% for transacao in transacoes %}
+  <article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="#">{{ transacao.usuario }}</a>
+        <small class="text-muted">{{ transacao.conta }}</small>
+      </div>
+      <h2><a class="article-title" href="#">{{ transacao.valor }}</a></h2>
+      <p class="article-content">{{ transacao.date_transferencia }}</p>
+    </div>
+  </article>
+  {% endfor %}
+{% endblock content %}
